@@ -34,7 +34,11 @@ curl https://raw.githubusercontent.com/apex/apex/master/install.sh | sh
 npm install
 apex deploy
 apex list --tfvars > ../terraform/apex.tfvars
-cd ../terraform
+```
+
+Now in terraform you must uncomment the code in the file `lambda-performance.tf` and run:
+
+```
 bin/plan
 bin/apply
 ```
@@ -59,4 +63,19 @@ apex invoke kinesis-producer < events.json
 
 ```
 {"mean":5.446699999999998,"median":5.524,"stddev":1.0865956806006547,"total":12.121}
+```
+
+## Cleaning up
+
+To remove the resources used run:
+
+```
+apex delete
+```
+
+And then in the terraform project comment the contents of `lambda-performance.tf` and run:
+
+```
+bin/plan
+bin/apply
 ```
