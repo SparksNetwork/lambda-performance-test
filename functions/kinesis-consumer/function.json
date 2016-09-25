@@ -1,3 +1,6 @@
 {
-  "role": "arn:aws:iam::878160042194:role/kinesis_consumer20160924233419931742338j32"
+  "role": "arn:aws:iam::878160042194:role/kinesis_consumer20160924233419931742338j32",
+  "environment": {
+    "TABLE_NAME": "kinesis-performance"
+  }
 }

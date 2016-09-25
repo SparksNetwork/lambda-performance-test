@@ -4,18 +4,22 @@ import apex from 'apex.js'
 const db = new aws.DynamoDB()
 
 function consumeMessage(message) {
-  return db.putItem({
-    Item: {
-      index: {
-        S: message.index
-      },
-      timestamp: {
-        S: message.timestamp
-      },
-      duration: {
-        S: String(Date.now - Number(message.timestamp))
-      }
+  const duration = (Date.now() - message.timestamp) / 1000
+
+  const item = {
+    index: {
+      N: String(message.index)
     },
+    timestamp: {
+      N: String(message.timestamp)
+    },
+    duration: {
+      N: String(duration)
+    }
+  }
+
+  return db.putItem({
+    Item: item,
     TableName: process.env.TABLE_NAME
   }).promise()
 }
