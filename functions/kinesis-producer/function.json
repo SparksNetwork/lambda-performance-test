@@ -1,6 +1,8 @@
 {
+  "timeout": 300,
   "role": "arn:aws:iam::878160042194:role/kinesis_producer20160924233419931743129nvx",
   "environment": {
-    "KINESIS_STREAM": "kinesis-performance"
+    "KINESIS_STREAM": "kinesis-performance",
+    "TABLE_NAME": "kinesis-performance"
   }
 }
