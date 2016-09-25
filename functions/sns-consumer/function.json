@@ -1,4 +1,5 @@
 {
+  "role": "arn:aws:iam::878160042194:role/sns_consumer20160924233419931744152mrl",
   "environment": {
     "TABLE_NAME": "arn:aws:dynamodb:us-west-2:878160042194:table/sns-performance"
   }

@@ -1,4 +1,5 @@
 {
+  "role": "arn:aws:iam::878160042194:role/sns_producer201609242334199317423116jn",
   "environment": {
     "TOPIC_ARN": "arn:aws:sns:us-west-2:878160042194:sns-performance"
   }

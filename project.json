@@ -3,7 +3,11 @@
   "description": "Performance test lambda",
   "memory": 128,
   "timeout": 5,
-  "role": "arn:aws:iam::878160042194:role/sparks-performance_lambda_function",
   "environment": {},
-  "runtime": "nodejs4.3"
+  "runtime": "nodejs4.3",
+  "handler": "main.default",
+  "hooks": {
+    "build": "../../node_modules/.bin/browserify --node -s default -t [ babelify --presets [ es2015 ] ] -o main.js index.js",
+    "clean": "rm main.js"
+  }
 }
