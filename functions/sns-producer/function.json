@@ -1,0 +1,5 @@
+{
+  "environment": {
+    "TOPIC_ARN": "arn:aws:sns:us-west-2:878160042194:sns-performance"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "environment": {
+    "TABLE_NAME": "arn:aws:dynamodb:us-west-2:878160042194:table/sns-performance"
+  }
+}
