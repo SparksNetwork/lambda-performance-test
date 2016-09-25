@@ -1,22 +1,32 @@
 # AWS lambda testing
 
-This is a really simple and short test of using AWS lambda with SNS or Kinesis for broadcasting messages.
+This is a really simple and short test of using AWS lambda 
+with SNS or Kinesis for broadcasting messages. The 
+producers will broadcast 100 messages. The consumers will 
+consume those messages and write the time it took them to 
+get the message into a dynamodb table. The producer will be 
+waiting for all it's messages to be written to that table 
+and will then produce the stats.
+
+Time given is in seconds. The total doesn't mean much as the producer has to poll dynamodb.
 
 ## Requirements:
 
 * Apex (apex.run)
 * Terraform (terraform.io)
+* Our terraform project (github.com/SparksNetwork/terraform) checked out into ../terraform
 * NodeJS
 
 ```
+# Terraform
 brew install terraform
+# Node
 brew install node-build nodenv
 nodenv install 6.6.0
 nodenv use 6.6.0
+# Apex
 curl https://raw.githubusercontent.com/apex/apex/master/install.sh | sh
 ```
-
-Note that you also need our terraform repo to generate the required resources.
 
 ## Install / setup
 
