@@ -1,0 +1,9 @@
+{
+  "name": "sparks-performance",
+  "description": "Performance test lambda",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::878160042194:role/sparks-performance_lambda_function",
+  "environment": {},
+  "runtime": "nodejs4.3"
+}
